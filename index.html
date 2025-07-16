@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyTravel - Pemesanan Tiket Pesawat</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="loading-spinner">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <p class="mt-3">Memuat halaman...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-plane"></i> SkyTravel
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="search.html">Penerbangan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="booking.html">Pemesanan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.html">Profil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Image Slider -->
+    <section class="hero-section">
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="dunia.jpg" class="d-block w-100" alt="Destinasi 1">
+                    <div class="carousel-caption">
+                        <h1 class="display-4 fw-bold">Jelajahi Dunia Bersama Kami</h1>
+                        <p class="lead">Temukan penerbangan terbaik dengan harga terjangkau</p>
+                        <a href="search.html" class="btn btn-light btn-lg">Mulai Pencarian</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="destinasi.jpg" class="d-block w-100" alt="Destinasi 2">
+                    <div class="carousel-caption">
+                        <h1 class="display-4 fw-bold">Destinasi Impian Menanti</h1>
+                        <p class="lead">Booking mudah, perjalanan nyaman</p>
+                        <a href="search.html" class="btn btn-light btn-lg">Pesan Sekarang</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="diskon.jpg" class="d-block w-100" alt="Destinasi 3">
+                    <div class="carousel-caption">
+                        <h1 class="display-4 fw-bold">Perjalanan yang menyenangkan</h1>
+                        <p class="lead">Dapatkan pengalaman yang menyenangkan selama perjalanan</p>
+                        <a href="search.html" class="btn btn-light btn-lg">Mari Pergi</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Featured Destinations -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Destinasi Populer</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="destination-card">
+                        <img src="bali.jpg" class="card-img-top" alt="Bali">
+                        <div class="card-body">
+                            <h5 class="card-title">Bali, Indonesia</h5>
+                            <p class="card-text">Pulau dewata dengan pantai eksotis dan budaya yang kaya</p>
+                            <div class="card-price">Mulai dari <strong>Rp 1.200.000</strong></div>
+                            <div class="card-overlay">
+                                <div class="overlay-content">
+                                    <h6>Detail Destinasi</h6>
+                                    <ul>
+                                        <li>Pantai Kuta & Sanur</li>
+                                        <li>Pura Tanah Lot</li>
+                                        <li>Ubud Rice Terrace</li>
+                                        <li>Mount Batur</li>
+                                    </ul>
+                                    <a href="search.html" class="btn btn-light btn-sm">Pesan Tiket</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="destination-card">
+                        <img src="jakarta.jpg" class="card-img-top" alt="Jakarta">
+                        <div class="card-body">
+                            <h5 class="card-title">Jakarta, Indonesia</h5>
+                            <p class="card-text">Ibu kota dengan kehidupan metropolitan yang dinamis</p>
+                            <div class="card-price">Mulai dari <strong>Rp 800.000</strong></div>
+                            <div class="card-overlay">
+                                <div class="overlay-content">
+                                    <h6>Detail Destinasi</h6>
+                                    <ul>
+                                        <li>Monas & Kota Tua</li>
+                                        <li>Ancol Dreamland</li>
+                                        <li>Grand Indonesia</li>
+                                        <li>Taman Mini Indonesia</li>
+                                    </ul>
+                                    <a href="search.html" class="btn btn-light btn-sm">Pesan Tiket</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="destination-card">
+                        <img src="jogja.jpg" class="card-img-top" alt="Yogyakarta">
+                        <div class="card-body">
+                            <h5 class="card-title">Yogyakarta, Indonesia</h5>
+                            <p class="card-text">Kota budaya dengan warisan sejarah yang memukau</p>
+                            <div class="card-price">Mulai dari <strong>Rp 900.000</strong></div>
+                            <div class="card-overlay">
+                                <div class="overlay-content">
+                                    <h6>Detail Destinasi</h6>
+                                    <ul>
+                                        <li>Candi Borobudur</li>
+                                        <li>Keraton Yogyakarta</li>
+                                        <li>Malioboro Street</li>
+                                        <li>Taman Sari</li>
+                                    </ul>
+                                    <a href="search.html" class="btn btn-light btn-sm">Pesan Tiket</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Mengapa Memilih SkyTravel?</h2>
+            <div class="row">
+                <div class="col-md-3 text-center mb-4">
+                    <div class="feature-icon">
+                        <i class="fas fa-search fa-3x text-primary"></i>
+                    </div>
+                    <h5 class="mt-3">Pencarian Mudah</h5>
+                    <p>Temukan penerbangan terbaik dengan sistem pencarian yang canggih</p>
+                </div>
+                <div class="col-md-3 text-center mb-4">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt fa-3x text-primary"></i>
+                    </div>
+                    <h5 class="mt-3">Aman & Terpercaya</h5>
+                    <p>Transaksi aman dengan sistem keamanan berlapis</p>
+                </div>
+                <div class="col-md-3 text-center mb-4">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset fa-3x text-primary"></i>
+                    </div>
+                    <h5 class="mt-3">Customer Service 24/7</h5>
+                    <p>Tim support siap membantu Anda kapan saja</p>
+                </div>
+                <div class="col-md-3 text-center mb-4">
+                    <div class="feature-icon">
+                        <i class="fas fa-tags fa-3x text-primary"></i>
+                    </div>
+                    <h5 class="mt-3">Harga Terbaik</h5>
+                    <p>Jaminan harga terbaik dengan berbagai promo menarik</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5><i class="fas fa-plane"></i> SkyTravel</h5>
+                    <p>Platform pemesanan tiket pesawat terpercaya di Indonesia</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>&copy; 2025 SkyTravel. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

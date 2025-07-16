@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - SkyTravel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="loading-spinner">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <p class="mt-3">Memuat halaman kontak...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-plane"></i> SkyTravel
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="search.html">Penerbangan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="booking.html">Pemesanan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.html">Profil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5 pt-5">
+        <!-- Contact Header -->
+        <div class="text-center mb-5">
+            <h1>Hubungi Kami</h1>
+            <p class="lead">Tim customer service kami siap membantu Anda 24/7</p>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8">
+                <!-- Contact Form -->
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0"><i class="fas fa-envelope"></i> Kirim Pesan</h5>
+                    </div>
+                    <div class="card-body">
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Nama Lengkap *</label>
+                                    <input type="text" class="form-control" id="contactName" required>
+                                    <div class="invalid-feedback" id="contactNameError"></div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Email *</label>
+                                    <input type="email" class="form-control" id="contactEmail" required>
+                                    <div class="invalid-feedback" id="contactEmailError"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Nomor Telepon</label>
+                                    <input type="tel" class="form-control" id="contactPhone">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Subjek *</label>
+                                    <select class="form-select" id="contactSubject" required>
+                                        <option value="">Pilih subjek</option>
+                                        <option value="booking">Pertanyaan Pemesanan</option>
+                                        <option value="payment">Masalah Pembayaran</option>
+                                        <option value="refund">Permintaan Refund</option>
+                                        <option value="complaint">Keluhan</option>
+                                        <option value="other">Lainnya</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Pesan *</label>
+                                <textarea class="form-control" id="contactMessage" rows="5" required></textarea>
+                                <div class="invalid-feedback" id="contactMessageError"></div>
+                                <div class="form-text">Maksimal 50 karakter</div>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="agreeTerms" required>
+                                <label class="form-check-label" for="agreeTerms">
+                                    Saya setuju dengan syarat dan ketentuan
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i> Kirim Pesan
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <!-- Contact Information -->
+                <div class="card shadow mb-4">
+                    <div class="card-header bg-info text-white">
+                        <h5 class="mb-0"><i class="fas fa-info-circle"></i> Informasi Kontak</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="contact-info">
+                            <div class="mb-3">
+                                <i class="fas fa-phone text-primary"></i>
+                                <strong>Telepon:</strong><br>
+                                <span>+62 21 1234 5678</span>
+                            </div>
+                            <div class="mb-3">
+                                <i class="fas fa-envelope text-primary"></i>
+                                <strong>Email:</strong><br>
+                                <span>support@skytravel.com</span>
+                            </div>
+                            <div class="mb-3">
+                                <i class="fas fa-map-marker-alt text-primary"></i>
+                                <strong>Alamat:</strong><br>
+                                <span>Jl. Sudirman No. 123<br>Jakarta Pusat, 10220</span>
+                            </div>
+                            <div class="mb-3">
+                                <i class="fas fa-clock text-primary"></i>
+                                <strong>Jam Operasional:</strong><br>
+                                <span>24 Jam / 7 Hari</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ -->
+                <div class="card shadow">
+                    <div class="card-header bg-warning text-dark">
+                        <h5 class="mb-0"><i class="fas fa-question-circle"></i> FAQ</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="accordion" id="faqAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                        Bagaimana cara membatalkan tiket?
+                                    </button>
+                                </h2>
+                                <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Anda dapat membatalkan tiket melalui halaman profil atau menghubungi customer service kami.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                        Berapa lama proses refund?
+                                    </button>
+                                </h2>
+                                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Proses refund membutuhkan waktu 3-7 hari kerja setelah permohonan disetujui.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5><i class="fas fa-plane"></i> SkyTravel</h5>
+                    <p>Platform pemesanan tiket pesawat terpercaya di Indonesia</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>&copy; 2025 SkyTravel. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
